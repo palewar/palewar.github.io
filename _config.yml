@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://swiftwala.com
+title: Swiftwala
+subtitle: A website about my journey with Swift and iOS Development
+author: Swiftwala
 simple_search: https://www.google.com/search
-description:
+description: A website about my journey with Swift and iOS Development
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -70,7 +70,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: swiftwala
 twitter_tweet_button: true
 
 # Google +1
@@ -98,4 +98,4 @@ disqus_show_comment_count: false
 google_analytics_tracking_id:
 
 # Facebook Like
-facebook_like: false
+facebook_like: true
