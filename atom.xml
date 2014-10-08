@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Swiftwala]]></title>
+  <title><![CDATA[Swift Wala]]></title>
   <link href="http://swiftwala.com/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-10-01T18:18:30+05:30</updated>
+  <updated>2014-10-08T17:51:50+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Swiftwala]]></name>
