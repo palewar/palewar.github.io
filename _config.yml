@@ -4,7 +4,7 @@
 
 url: http://swiftwala.com
 title: Swift Wala
-subtitle: Let's talk about Swift
+subtitle: My Swift Adventure
 author: Swiftwala
 simple_search: https://www.google.com/search
 description: A website about my journey with Swift and iOS Development
@@ -91,11 +91,11 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: swiftwala
+disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-55591301-1
 
 # Facebook Like
 facebook_like: true
