@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Misc | Swift Wala]]></title>
   <link href="http://swiftwala.com/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-10-09T15:30:32+05:30</updated>
+  <updated>2014-10-10T18:27:27+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Swiftwala]]></name>
@@ -18,9 +18,9 @@
     <link href="http://swiftwala.com/misc/hello-swift"/>
     <updated>2014-10-02T11:39:17+05:30</updated>
     <id>http://swiftwala.com/misc/hello-swift</id>
-    <content type="html"><![CDATA[<p>I was thinking about learning Swift someday, but what really made me take the plunge was <a href="http://www.wired.com/2014/07/apple-swift/" title="Why Apple’s Swift Language Will Instantly Remake Computer Programming">this article on Wired</a>. This article has one of the best opening I have read, it goes something like this:</p>
+    <content type="html"><![CDATA[<p><img class="right" src="/images/Apple_Swift_Logo.png" width="100" height="100"> I was thinking about learning <a href="https://developer.apple.com/swift/">Swift</a> someday, but what really made me take the plunge was <a href="http://www.wired.com/2014/07/apple-swift/" title="Why Apple’s Swift Language Will Instantly Remake Computer Programming">this article on Wired</a>. This article has one of the best opening I have read, it goes something like this:</p>
 
-<blockquote><p>Chris Lattner spent a year and a half creating a new programming language—a new way of designing, building, and running computer software—and he didn’t mention it to anyone, not even his closest friends and colleagues. <!-- more --> He started in the summer of 2010, working at night and on weekends, and by the end of the following year, he’d mapped out the basics of the new language. That’s when he revealed his secret to the top executives at his company, and they were impressed enough to put a few other seasoned engineers on the project. Then, after another eighteen months, it became a “major focus” for the company, with a huge team of developers working alongside Lattner, and that meant the new language would soon change the world of computing. Lattner, you see, works for Apple.</p></blockquote>
+<blockquote><p>Chris Lattner spent a year and a half creating a new programming language — a new way of designing, building, and running computer software — and he didn&rsquo;t mention it to anyone, not even his closest friends and colleagues. <!-- more --> He started in the summer of 2010, working at night and on weekends, and by the end of the following year, he’d mapped out the basics of the new language. That’s when he revealed his secret to the top executives at his company, and they were impressed enough to put a few other seasoned engineers on the project. Then, after another eighteen months, it became a “major focus” for the company, with a huge team of developers working alongside Lattner, and that meant the new language would soon change the world of computing. Lattner, you see, works for Apple.</p></blockquote>
 
 <p>You can continue reading at <a href="http://www.wired.com/2014/07/apple-swift/">Wired</a>. After reading this article I spent most of my day stalking <a href="http://www.nondot.org/sabre/">Chris</a> online :-)</p>
 
