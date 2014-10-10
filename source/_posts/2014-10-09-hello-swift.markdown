@@ -5,10 +5,9 @@ date: 2014-10-02 11:39:17 +0530
 comments: true
 categories: Misc
 ---
+{% img right /images/Apple_Swift_Logo.png 100 100 %} I was thinking about learning [Swift](https://developer.apple.com/swift/) someday, but what really made me take the plunge was [this article on Wired](http://www.wired.com/2014/07/apple-swift/ "Why Apple’s Swift Language Will Instantly Remake Computer Programming"). This article has one of the best opening I have read, it goes something like this: 
 
-I was thinking about learning Swift someday, but what really made me take the plunge was [this article on Wired](http://www.wired.com/2014/07/apple-swift/ "Why Apple’s Swift Language Will Instantly Remake Computer Programming"). This article has one of the best opening I have read, it goes something like this:
-
-> Chris Lattner spent a year and a half creating a new programming language—a new way of designing, building, and running computer software—and he didn’t mention it to anyone, not even his closest friends and colleagues. <!-- more --> He started in the summer of 2010, working at night and on weekends, and by the end of the following year, he’d mapped out the basics of the new language. That’s when he revealed his secret to the top executives at his company, and they were impressed enough to put a few other seasoned engineers on the project. Then, after another eighteen months, it became a “major focus” for the company, with a huge team of developers working alongside Lattner, and that meant the new language would soon change the world of computing. Lattner, you see, works for Apple.
+> Chris Lattner spent a year and a half creating a new programming language — a new way of designing, building, and running computer software — and he didn't mention it to anyone, not even his closest friends and colleagues. <!-- more --> He started in the summer of 2010, working at night and on weekends, and by the end of the following year, he’d mapped out the basics of the new language. That’s when he revealed his secret to the top executives at his company, and they were impressed enough to put a few other seasoned engineers on the project. Then, after another eighteen months, it became a “major focus” for the company, with a huge team of developers working alongside Lattner, and that meant the new language would soon change the world of computing. Lattner, you see, works for Apple.
 
 You can continue reading at [Wired](http://www.wired.com/2014/07/apple-swift/). After reading this article I spent most of my day stalking [Chris](http://www.nondot.org/sabre/) online :-)
 
