@@ -4,7 +4,7 @@
   <title><![CDATA[Swift Wala]]></title>
   <link href="http://swiftwala.com/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-10-10T18:27:27+05:30</updated>
+  <updated>2014-10-13T12:31:03+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Swiftwala]]></name>
@@ -14,17 +14,16 @@
 
   
   <entry>
-    <title type="html"><![CDATA[They Pay You to Learn Swift]]></title>
-    <link href="http://swiftwala.com/playground/they-pay-you-to-learn-swift"/>
-    <updated>2014-10-06T12:47:07+05:30</updated>
-    <id>http://swiftwala.com/playground/they-pay-you-to-learn-swift</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://swiftwala.com/images/topcoderswift.png"> So I was trying to find something to do in Swift. I thought, maybe I should work on some simple, dummy apps to hone my skills. I was considering a few ideas, but then I got a mail from <a href="http://www.topcoder.com/?action=callback&amp;utm_source=palewar&amp;utm_campaign=ReferralProgram">Topcoder</a> announcing their <a href="http://swift.topcoder.com/?action=callback&amp;utm_source=palewar&amp;utm_campaign=ReferralProgram">GetSwifter</a> series. It basically is a series of development challenges in Swift. They have decided to distribute $500,000 as prizes. <!-- more --> I checked out their Swift Challenges and found that they were mostly some simple apps. They keep posting a few challenges every week and typical time to complete the challenges is about 4-6 days. I found this very interesting and started working on a few challenges.</p>
+    <title type="html"><![CDATA[My First Swift Code]]></title>
+    <link href="http://swiftwala.com/my-first-swift-code"/>
+    <updated>2014-10-07T12:00:18+05:30</updated>
+    <id>http://swiftwala.com/my-first-swift-code</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://swiftwala.com/images/playground.png" width="150" height="150"> Ok so finally we see some real Swift code for the first time on this blog. Yay!! As I mentioned in my <a href="http://swiftwala.com/they-pay-you-to-learn-swift">last post</a>, my solution <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> for the <a href="http://www.topcoder.com/?action=callback&amp;utm_source=palewar&amp;utm_campaign=ReferralProgram">Topcoder</a> $100 Playground challenge is given below. It helped me to get started with some Swift syntax and get a bit comfortable using playground feature of Swift. Don&rsquo;t worry about so many lines. Most of it is comments. Comments basically are instructions for participants on what needs to be done. Solution to the problem follows the comment.</p>
 
-<p>They just finished distributing $100,000 to 1000 people. It was a very simple challenge to get started. They just wanted participants to create a playground file and intention was to test that we have understood basics in Swift and can write and use Classes, Structures, Arrays, Tuples etc. I participated in this challenge and was successful in earning my first prize at Topcoder. They basically gave $100 to first 1000 people who completed the challenge successfully.</p>
+<!-- more -->
 
-<p>While this simple challenge is already over, not so simple and some real-world challenges are in progress and more challenges are being added regularly so I urge all of you to checkout <a href="http://swift.topcoder.com/?action=callback&amp;utm_source=palewar&amp;utm_campaign=ReferralProgram">Swift Challenges</a> on <a href="http://www.topcoder.com/?action=callback&amp;utm_source=palewar&amp;utm_campaign=ReferralProgram">Topcoder</a> right now and start participating. It&rsquo;s really a good way to learn Swift and in these crazy times, you get paid to learn it, so make the most of it.</p>
 
-<p>For those interested in the $100 Playground challenge, I am sharing my solution <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> below, it may be of help to others. Don&rsquo;t worry about so many lines. Most of it is comments. Comments basically are instructions for participants on what needs to be done. Solution to the problem follows the comment.</p>
+<p></p>
 
 <p>I found myself referring <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-XID_454">Apple&rsquo;s Swift Book</a> many times to get the concepts right for each of these problems. Getting the Generics right took sometime and I also referred good old <a href="http://stackoverflow.com">StackOverFlow</a> a few times, specially to get the random number generation right.</p>
 
@@ -309,10 +308,25 @@ println(cart.getCartStatus())</code></pre></noscript></div>
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[They Pay You to Learn Swift]]></title>
+    <link href="http://swiftwala.com/they-pay-you-to-learn-swift"/>
+    <updated>2014-10-06T12:47:07+05:30</updated>
+    <id>http://swiftwala.com/they-pay-you-to-learn-swift</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://swiftwala.com/images/topcoderswift.png"> So as I mentioned in my <a href="http://swiftwala.com/hello-swift">last post</a> I was trying to find something to do in Swift. I thought, maybe I should work on some simple, dummy apps to hone my skills. I was considering a few ideas, but then I got a mail from <a href="http://www.topcoder.com/?action=callback&amp;utm_source=palewar&amp;utm_campaign=ReferralProgram">Topcoder</a> announcing their <a href="http://swift.topcoder.com/?action=callback&amp;utm_source=palewar&amp;utm_campaign=ReferralProgram">GetSwifter</a> series. It basically is a series of development challenges in Swift. They have decided to distribute $500,000 as prizes. <!-- more --> I checked out their Swift Challenges and found that they were mostly some simple apps. They keep posting a few challenges every week and typical time to complete the challenges is about 4-6 days. I found this very interesting and started working on a few challenges.</p>
+
+<p>They just finished distributing $100,000 to 1000 people. It was a very simple challenge to get started. They just wanted participants to create a playground file and intention was to test that we have understood basics in Swift and can write and use Classes, Structures, Arrays, Tuples etc. I participated in this challenge and was successful in earning my first prize at Topcoder. They basically gave $100 to first 1000 people who completed the challenge successfully.</p>
+
+<p>While this simple challenge is already over, not so simple and some real-world challenges are in progress and more challenges are being added regularly so I urge all of you to checkout <a href="http://swift.topcoder.com/?action=callback&amp;utm_source=palewar&amp;utm_campaign=ReferralProgram">Swift Challenges</a> on <a href="http://www.topcoder.com/?action=callback&amp;utm_source=palewar&amp;utm_campaign=ReferralProgram">Topcoder</a> right now and start participating. It&rsquo;s really a good way to learn Swift and in these crazy times, you get paid to learn it, so make the most of it.</p>
+
+<p>For those interested in the code for $100 Playground challenge, I am going to share it in my next post.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Hello Swift]]></title>
-    <link href="http://swiftwala.com/misc/hello-swift"/>
+    <link href="http://swiftwala.com/hello-swift"/>
     <updated>2014-10-02T11:39:17+05:30</updated>
-    <id>http://swiftwala.com/misc/hello-swift</id>
+    <id>http://swiftwala.com/hello-swift</id>
     <content type="html"><![CDATA[<p><img class="right" src="http://swiftwala.com/images/Apple_Swift_Logo.png" width="100" height="100"> I was thinking about learning <a href="https://developer.apple.com/swift/">Swift</a> someday, but what really made me take the plunge was <a href="http://www.wired.com/2014/07/apple-swift/" title="Why Apple’s Swift Language Will Instantly Remake Computer Programming">this article on Wired</a>. This article has one of the best opening I have read, it goes something like this:</p>
 
 <blockquote><p>Chris Lattner spent a year and a half creating a new programming language — a new way of designing, building, and running computer software — and he didn&rsquo;t mention it to anyone, not even his closest friends and colleagues. <!-- more --> He started in the summer of 2010, working at night and on weekends, and by the end of the following year, he’d mapped out the basics of the new language. That’s when he revealed his secret to the top executives at his company, and they were impressed enough to put a few other seasoned engineers on the project. Then, after another eighteen months, it became a “major focus” for the company, with a huge team of developers working alongside Lattner, and that meant the new language would soon change the world of computing. Lattner, you see, works for Apple.</p></blockquote>

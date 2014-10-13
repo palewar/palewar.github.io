@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Playground | Swift Wala]]></title>
-  <link href="http://swiftwala.com/blog/categories/playground/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Code | Swift Wala]]></title>
+  <link href="http://swiftwala.com/blog/categories/code/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
   <updated>2014-10-13T12:31:03+05:30</updated>
   <id>http://swiftwala.com/</id>
