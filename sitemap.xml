@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://swiftwala.com/enum-equals-struct-equals-class</loc>
+    
+    <lastmod>2014-10-10T16:07:43+05:30</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://swiftwala.com/my-first-swift-code</loc>
     
     <lastmod>2014-10-07T12:00:18+05:30</lastmod>
@@ -29,14 +37,14 @@
   
   <url>
     <loc>http://swiftwala.com/blog/archives/</loc>
-    <lastmod>2014-10-13T12:31:03+05:30</lastmod>
+    <lastmod>2014-10-14T18:40:21+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://swiftwala.com/</loc>
-    <lastmod>2014-10-13T12:31:03+05:30</lastmod>
+    <lastmod>2014-10-14T18:40:21+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
