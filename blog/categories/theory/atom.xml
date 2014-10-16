@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Theory | Swift Wala]]></title>
   <link href="http://swiftwala.com/blog/categories/theory/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-10-14T18:40:21+05:30</updated>
+  <updated>2014-10-16T11:51:41+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Swiftwala]]></name>
@@ -18,7 +18,7 @@
     <link href="http://swiftwala.com/enum-equals-struct-equals-class"/>
     <updated>2014-10-10T16:07:43+05:30</updated>
     <id>http://swiftwala.com/enum-equals-struct-equals-class</id>
-    <content type="html"><![CDATA[<p>I have used enums, structs and classes in other languages before, but never thought that I will ever be comparing them,<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> as they always seemed to be completely different programming concepts in other languages. Well Swift is different, it has supercharged enums and structs so much so that it may seem overwhelming and outright confusing to not-so-pro programmers like me.</p>
+    <content type="html"><![CDATA[<p>I have used enums, structs and classes in other languages before, but never thought that I will ever be comparing them,<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> as they always seemed to be completely different programming concepts in other languages. Well Swift is different, it has supercharged enums and structs so much so that it may seem overwhelming and outright confusing.</p>
 
 <p>Ok, brace yourself. Here it comes - <strong>Both enums and structs can have properties and methods like classes.</strong> <!-- more -->What?? That was exactly my reaction. This new concept was so alien to me that my head started spinning and I gave up on reading and understanding these concepts in detail in the <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_135">Swift Book</a>. So a few days passed and I was just checking out how many <a href="https://github.com/trending?l=swift&amp;since=monthly">Swift Repos</a> are there on Github, and I came across <a href="https://github.com/dankogai/swift-json">swift-json</a> by <a href="http://en.wikipedia.org/wiki/Dan_Kogai">Dan Kogai</a>. While <a href="https://github.com/dankogai/swift-json/wiki/Discussion">explaining</a> his approach, Dan drops some pearls of wisdom:</p>
 
