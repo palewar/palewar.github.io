@@ -4,7 +4,7 @@
   <title><![CDATA[Swift Wala]]></title>
   <link href="http://swiftwala.com/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-10-16T11:58:34+05:30</updated>
+  <updated>2014-10-21T18:06:28+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Swiftwala]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Multiple Detail Views in iOS8]]></title>
+    <link href="http://swiftwala.com/multiple-detail-views"/>
+    <updated>2014-10-21T17:17:28+05:30</updated>
+    <id>http://swiftwala.com/multiple-detail-views</id>
+    <content type="html"><![CDATA[<p>A few days back I was trying to create a simple iOS app to compete in one of the contest at <a href="http://www.topcoder.com/?action=callback&amp;utm_source=palewar&amp;utm_campaign=ReferralProgram">Topcoder</a>. I needed a Table View to show initial menu, then one of the menus had submenus so needed second Table View to show that. I needed a couple of Detail Views which should open when clicked on any of the menu items. <!-- more --> I hadn&rsquo;t programed for a few years now, so I was not familiar with Storyboards as Nibs were the norm a few years back. I was also learning Swift, so I couldn&rsquo;t really finish the app before the deadline.</p>
+
+<p>However while trying to work on the app, I often googled for samples with different combinations of keywords &lsquo;Multiple Detail Views&rsquo;. I found a sample by <a href="https://developer.apple.com/library/ios/samplecode/MultipleDetailViews/Introduction/Intro.html">Apple</a>, but it was last updated in 2012 and was done in Objective C and Xib/Nib files. I couldn&rsquo;t find anything done in <a href="http://www.apple.com/swift/">Swift</a>.</p>
+
+<p>I spent a few days understanding Storyboards, Segues, new UISplitViewController in iOS8 and finally could do the job myself. I started with &lsquo;Master Detail Application&rsquo; template of Xcode 6 and made some modifications to code and storyboard to achieve the desired result. Using latest iOS 8 API meant we could do an universal app which should run well on both iPhones as well as iPads. You can get the code from <a href="https://github.com/palewar/Swift-Samples">Github</a>. I hope it will come handy while doing your new iOS8 project in Swift.</p>
+
+<p>Happy Swifting :-)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Enum=Struct=Class]]></title>
