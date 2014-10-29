@@ -104,7 +104,36 @@
 
 <p>However while trying to work on the app, I often googled for samples with different combinations of keywords &lsquo;Multiple Detail Views&rsquo;. I found a sample by <a href="https://developer.apple.com/library/ios/samplecode/MultipleDetailViews/Introduction/Intro.html">Apple</a>, but it was last updated in 2012 and was done in Objective C and Xib/Nib files. I couldn&rsquo;t find anything done in <a href="http://www.apple.com/swift/">Swift</a>.</p>
 
-<p>I spent a few days understanding Storyboards, Segues, new UISplitViewController in iOS8 and finally could do the job myself. I started with &lsquo;Master Detail Application&rsquo; template of Xcode 6 and made some modifications to code and storyboard to achieve the desired result. Using latest iOS 8 API meant we could do an universal app which should run well on both iPhones as well as iPads. You can get the code from <a href="https://github.com/palewar/Swift-Samples">Github</a>. I hope it will come handy while doing your new iOS8 project in Swift.</p>
+<p>I spent a few days understanding Storyboards, Segues, new UISplitViewController in iOS8 and finally could do the job myself. I started with &lsquo;Master Detail Application&rsquo; template of Xcode 6. I selected &lsquo;Universal&rsquo; for Devices and &lsquo;Swift&rsquo; as Language while creating project. I got a Split View, Navigation Controller setup along with a single Table View and a Detail View. I made copies of Table View and Detail View to end up with 2 Table Views and 2 Detail Views, just like in the Apple sample.</p>
+
+<p>Next we need to wire up the Segues. A simple solution to open different views from different rows of a Table View is to have &lsquo;Static Cells&rsquo; in table view, which allows you to setup rows using Storyboard itself and then you can control+drag from individual rows to different views and voila you have automatic segues to different views. Nothing more needs to be done. This approach is actually very simple and perfect for the scenario we are considering right now. We need first Table View to display menu options, which will probably be known in advance so can use static cells for that.</p>
+
+<p>However in real-life scenarios we may need to open different views from different rows which may not be known in advance. So I decided to use segues with prototype cells and set row contents at runtime using <code>cellForRowAtIndexPath</code> method. Since we don&rsquo;t have access to individual rows in Storyboards while using prototype cells, we can not do automatic segues and we can&rsquo;t control+drag from individual rows. We control+drag from ViewController icon at the top instead. Also we must set up an identifier for the segue using Attributes Inspector, we will need that to trigger segue manually like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='swift'><span class='line'><span class="kr">override</span> <span class="k">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nl">tableView</span><span class="p">:</span> <span class="bp">UITableView</span><span class="p">,</span> <span class="n">didSelectRowAtIndexPath</span> <span class="nl">indexPath</span><span class="p">:</span> <span class="bp">NSIndexPath</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">indexPath</span><span class="p">.</span><span class="n">row</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nb">self</span><span class="p">.</span><span class="n">performSegueWithIdentifier</span><span class="p">(</span><span class="s">&quot;showTableView2&quot;</span><span class="p">,</span> <span class="nl">sender</span><span class="p">:</span> <span class="nb">self</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">indexPath</span><span class="p">.</span><span class="n">row</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nb">self</span><span class="p">.</span><span class="n">performSegueWithIdentifier</span><span class="p">(</span><span class="s">&quot;showDetail1&quot;</span><span class="p">,</span> <span class="nl">sender</span><span class="p">:</span> <span class="nb">self</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nb">self</span><span class="p">.</span><span class="n">performSegueWithIdentifier</span><span class="p">(</span><span class="s">&quot;showDetail2&quot;</span><span class="p">,</span> <span class="nl">sender</span><span class="p">:</span> <span class="nb">self</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>And that&rsquo;s how we open different views from rows of a Table View. I did write a little more code to take care of Back Navigation button for Detail Views and to handle portrait to landscape transition correcly for iPhone 6+ (Yes it&rsquo;s a little different from iPad landscape transition). Also we used <strong>Show Detail</strong> segue instead of <strong>Push</strong>. Show Detail is an <strong>Adaptive segue</strong> introduced with iOS8 and it lets us use SplitView Controller for iPhone app as well and that&rsquo;s how we could do an universal app using a single storyboard, which runs well on both iPhones as well as iPads. You can get the complete code from <a href="https://github.com/palewar/Swift-Samples">Github</a>. I hope it will come handy while doing your new iOS8 project in Swift.</p>
 
 <p>Happy Swifting :-)</p>
 </div>
