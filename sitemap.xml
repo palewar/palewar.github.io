@@ -45,16 +45,23 @@
   
   <url>
     <loc>http://swiftwala.com/blog/archives/</loc>
-    <lastmod>2014-10-29T13:32:01+05:30</lastmod>
+    <lastmod>2014-11-03T17:26:28+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://swiftwala.com/</loc>
-    <lastmod>2014-10-29T13:32:01+05:30</lastmod>
+    <lastmod>2014-11-03T17:26:28+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://swiftwala.com/links/</loc>
+    <lastmod>2014-11-03T17:26:28+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   
   
