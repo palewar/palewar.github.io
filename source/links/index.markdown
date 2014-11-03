@@ -17,3 +17,4 @@ Here are some of the resources on web I find useful:
 [Official Swift Blog](https://developer.apple.com/swift/blog/)  
 [Swift Repos on Github](https://github.com/search?utf8=%E2%9C%93&q=language%3ASwift&type=Repositories&ref=advsearch&l=Swift)  
 [Swift Questions on StackOverFlow](http://stackoverflow.com/questions/tagged/swift)  
+[Swift Coding Contests on Topcoder](http://swift.topcoder.com/fun-challenges/?action=callback&utm_source=palewar&utm_campaign=ReferralProgram)  
