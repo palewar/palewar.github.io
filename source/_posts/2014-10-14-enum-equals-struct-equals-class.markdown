@@ -3,7 +3,7 @@ layout: post
 title: "Enum=Struct=Class"
 date: 2014-10-10 16:07:43 +0530
 comments: true
-categories: theory 
+categories: [theory, equals]
 ---
 I have used enums, structs and classes in other languages before, but never thought that I will ever be comparing them,[^1] as they always seemed to be completely different programming concepts in other languages. Well Swift is different, it has supercharged enums and structs so much so that it may seem overwhelming and outright confusing.
 

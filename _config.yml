@@ -4,10 +4,10 @@
 
 url: http://swiftwala.com
 title: Swift Wala
-subtitle: My Swift Adventure
+subtitle: A Blog about Swift and iOS Development
 author: Swiftwala
 simple_search: https://www.google.com/search
-description: A website about my journey with Swift and iOS Development
+description: A Blog about Swift and iOS Development
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
