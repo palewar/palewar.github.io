@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ios8 | Swift Wala]]></title>
+  <link href="http://swiftwala.com/blog/categories/ios8/atom.xml" rel="self"/>
+  <link href="http://swiftwala.com/"/>
+  <updated>2014-11-11T14:35:50+05:30</updated>
+  <id>http://swiftwala.com/</id>
+  <author>
+    <name><![CDATA[Swiftwala]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[UISplitViewController = UINavigationController]]></title>
+    <link href="http://swiftwala.com/uisplitviewcontroller-equals-uinavigationcontroller"/>
+    <updated>2014-11-04T12:02:40+05:30</updated>
+    <id>http://swiftwala.com/uisplitviewcontroller-equals-uinavigationcontroller</id>
+    <content type="html"><![CDATA[<p>You read it right. If you are using iOS8, UISplitViewController indeed behaves as if it&rsquo;s a UINavigationController on iPhone. Obviously it means that <strong>UISplitViewController is now supported for iPhones as well</strong>. This is a small but important part of the bigger picture of Universal Storyboards and Adaptive UI starting from iOS8. <!-- more --> Now it&rsquo;s possible for us to have a single <strong>Universal Storyboard which supports all types of iPhones and iPads</strong>.</p>
+
+<p>You will also notice that in XCode6 there is now a new Master-Detail Application template. If you select a Universal Project option with it, you get a Storyboard with UISplitViewController and you can run it against both iPhone as well as iPad simulators. You use <strong>new Adaptive segues, &lsquo;Show&rsquo; for Master View and &lsquo;Show Detail&rsquo; for Detail View instead of &lsquo;Push&rsquo;</strong> which is now deprecated. &lsquo;Show&rsquo; is similar to &lsquo;Push&rsquo;. When running on iPad &lsquo;Show Detail&rsquo; ensures that Detail View is displayed on right side of Split, but when running on an iPhone &lsquo;Show Detail&rsquo; automatically starts behaving as &lsquo;Show&rsquo; and Detail View is displayed as the single view on top. Very creative approach isn&rsquo;t it?</p>
+
+<p>For the sake of simplicity I have generalized a bit. Once you understand the concepts though, you need to know that above behavior is not really fixed and you can have a split view on an iPhone if you want. Not to forget iPhone 6+ by default supports Split View in landscape mode. To support Split View on smaller iPhone you can modify <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITraitSet_ClassReference/index.html">Trait Collection</a>. Also at times you may want to not display detail view on iPhones and instead directly show master view. If detail is empty, it doesn&rsquo;t make sense to display a blank view as the only view at the top. You can control which view appears as the top view on iPhone when using Universal Storyboard using new methods in <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UISplitViewControllerDelegate_protocol/index.html">Delegate</a></p>
+
+<p>For a really simple introduction to new UISplitViewController you may read this <a href="http://nshipster.com/uisplitviewcontroller/">post by Natasha Murashev</a> and then come back and check out my <a href="http://swiftwala.com/multiple-detail-views">Multiple Detail Views Sample</a> to see the Split View in action. I also suggest you to check out <a href="http://www.jessesquires.com/adaptive-user-interfaces/">Adaptive UI by Jesse Squires</a> where he explains &lsquo;Size-Classes&rsquo; in a very simple manner and suggests the way forward for iOS Developers and designers.</p>
+
+<p>Let&rsquo;s be Adaptive :-)</p>
+]]></content>
+  </entry>
+  
+</feed>

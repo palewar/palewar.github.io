@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://swiftwala.com/uisplitviewcontroller-equals-uinavigationcontroller</loc>
+    
+    <lastmod>2014-11-04T12:02:40+05:30</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://swiftwala.com/multiple-detail-views</loc>
     
     <lastmod>2014-10-21T17:17:28+05:30</lastmod>
@@ -45,21 +53,21 @@
   
   <url>
     <loc>http://swiftwala.com/blog/archives/</loc>
-    <lastmod>2014-11-03T17:44:52+05:30</lastmod>
+    <lastmod>2014-11-11T14:35:50+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://swiftwala.com/</loc>
-    <lastmod>2014-11-03T17:44:52+05:30</lastmod>
+    <lastmod>2014-11-11T14:35:50+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://swiftwala.com/links/</loc>
-    <lastmod>2014-11-03T17:44:52+05:30</lastmod>
+    <lastmod>2014-11-11T14:35:50+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
