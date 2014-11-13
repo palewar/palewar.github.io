@@ -4,7 +4,7 @@
   <title><![CDATA[Swift Wala]]></title>
   <link href="http://swiftwala.com/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-11-11T16:13:38+05:30</updated>
+  <updated>2014-11-13T15:01:09+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Swiftwala]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Functions = Closures]]></title>
+    <link href="http://swiftwala.com/functions-equals-closures"/>
+    <updated>2014-11-11T12:04:48+05:30</updated>
+    <id>http://swiftwala.com/functions-equals-closures</id>
+    <content type="html"><![CDATA[<p>Unlike my other posts <a href="http://swiftwala.com/blog/categories/equals/">equating</a> 2 concepts, I am actually completely right this time. As Functions in Swift are actually just <strong>Closures with a name</strong>. So what is a Closure? It&rsquo;s like a function, but without a name :-)</p>
+
+<p>Here is a simple Function:<!-- more --></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='swift'><span class='line'><span class="k">func</span> <span class="n">isFirstStringGreater</span><span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+Which can be written as Closure like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='swift'><span class='line'><span class="p">{</span> <span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+So basically we write Closure inside the curly braces, omit the <code>func</code> keyword and a name and instead of wrapping body within braces, we mark the beginning of body by  <code>in</code> keyword.</p>
+
+<p>Above closure can be further shortened to <code>{ s1, s2 in s1 &gt; s2 }</code> and even to just <code>&gt;</code> if closure is being passed as an argument to a function. How all these shortening works has been explained really well in <a href="https://developer.apple.com/library/mac/documentation/swift/conceptual/swift_programming_language/Closures.html">Apple Docs</a>. You will find details about concepts like <strong>&lsquo;Trailing Closure&rsquo;</strong> and <strong>&lsquo;Capturing&rsquo;</strong> explained in the documentation as well.</p>
+
+<p>Now let&rsquo;s talk about Functions. We have already seen what a function looks like in Swift above, however if you have used Objective C, you may miss the named parameters while calling a function. Well don&rsquo;t worry functions in swift are quite flexible and powerful. Here are some points to remember regarding function parameters in Swift:</p>
+
+<ul>
+<li>We can prefix <code>#</code> to Parameter names to get expressive parameter names like Objective-C.</li>
+<li>For parameters with default values Swift automatically uses their names as external names without prefixing <code>#</code>.</li>
+<li>Parameter are constant by default, to make them variable prefix parameter name with <code>var</code>.</li>
+</ul>
+
+
+<p>Again Apple has explained Functions quite well in it&rsquo;s <a href="https://developer.apple.com/library/mac/documentation/swift/conceptual/swift_programming_language/Functions.html">documentation</a> so do check it out for detailed understanding. You may like to pay special attention to understand <strong>In-out</strong> and <strong>Variadic</strong> parameters.</p>
+
+<p>Something which is really different and powerful regarding Swift Functions is that you can treat them as regular objects or types. You can assign them to vars and constants, pass them as parameters to other functions and even return a function from a function. Swift has taken these ideas from <strong>&lsquo;Functional Programming&rsquo;</strong> languages. Although <a href="http://robnapier.net/swift-is-not-functional">Swift is not completely functional</a>, it lets you use several Functional Programming concepts. To better understand Functional Programming with Swift you can check out this <a href="http://www.raywenderlich.com/82599/swift-functional-programming-tutorial">Ray Wenderlich Tutorial</a> and consider buying <a href="http://www.objc.io/books/">this book</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[UISplitViewController=UINavigationController]]></title>

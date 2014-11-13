@@ -134,6 +134,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/functions-equals-closures">Functions = Closures</a>
+      </li>
+    
+      <li class="post">
         <a href="/uisplitviewcontroller-equals-uinavigationcontroller">UISplitViewController=UINavigationController</a>
       </li>
     
@@ -149,11 +153,36 @@
         <a href="/my-first-swift-code">My First Swift Code</a>
       </li>
     
-      <li class="post">
-        <a href="/they-pay-you-to-learn-swift">They Pay You to Learn Swift</a>
-      </li>
-    
   </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/palewar">@palewar</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'palewar',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
