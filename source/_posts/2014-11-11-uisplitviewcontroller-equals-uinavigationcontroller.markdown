@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "UISplitViewController = UINavigationController"
+title: "UISplitViewController=UINavigationController"
 date: 2014-11-04 12:02:40 +0530
 comments: true
 categories: [theory, equals, UISplitViewController, Adaptive, iOS8]
