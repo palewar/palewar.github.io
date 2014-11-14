@@ -4,10 +4,10 @@
   <title><![CDATA[Category: Theory | Swift Wala]]></title>
   <link href="http://swiftwala.com/blog/categories/theory/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-11-13T15:01:09+05:30</updated>
+  <updated>2014-11-14T17:35:50+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
-    <name><![CDATA[Swiftwala]]></name>
+    <name><![CDATA[Sachin Palewar]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -50,6 +50,8 @@
 <p>Again Apple has explained Functions quite well in it&rsquo;s <a href="https://developer.apple.com/library/mac/documentation/swift/conceptual/swift_programming_language/Functions.html">documentation</a> so do check it out for detailed understanding. You may like to pay special attention to understand <strong>In-out</strong> and <strong>Variadic</strong> parameters.</p>
 
 <p>Something which is really different and powerful regarding Swift Functions is that you can treat them as regular objects or types. You can assign them to vars and constants, pass them as parameters to other functions and even return a function from a function. Swift has taken these ideas from <strong>&lsquo;Functional Programming&rsquo;</strong> languages. Although <a href="http://robnapier.net/swift-is-not-functional">Swift is not completely functional</a>, it lets you use several Functional Programming concepts. To better understand Functional Programming with Swift you can check out this <a href="http://www.raywenderlich.com/82599/swift-functional-programming-tutorial">Ray Wenderlich Tutorial</a> and consider buying <a href="http://www.objc.io/books/">this book</a>.</p>
+
+<p>If you like my posts, please follow <a href="https://twitter.com/swiftwala">@Swiftwala</a> on Twitter to stay connected.</p>
 ]]></content>
   </entry>
   
