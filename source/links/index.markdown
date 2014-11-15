@@ -8,6 +8,12 @@ footer: true
 ---
 Here are some of the resources on web I find useful:
 
+[NSHipster](http://nshipster.com/)  
+[Cocoaphony](http://robnapier.net/)  
+[Sam Davies](http://iwantmyreal.name/)  
+[RAYWENDERLICH](http://www.raywenderlich.com/)  
+[Natasha The Robot](http://natashatherobot.com/)  
+
 [Making App Pie](http://makeapppie.com/)  
 [objc](http://www.objc.io/)  
 [Data Structures & Algorithms](http://waynewbishop.com/swift)  
@@ -15,6 +21,9 @@ Here are some of the resources on web I find useful:
 [SkipCasts - Video Tutorials](https://skipcasts.com/)  
 [Swift Programming on Medium](https://medium.com/swift-programming)  
 [Official Swift Blog](https://developer.apple.com/swift/blog/)  
+
 [Swift Repos on Github](https://github.com/search?utf8=%E2%9C%93&q=language%3ASwift&type=Repositories&ref=advsearch&l=Swift)  
 [Swift Questions on StackOverFlow](http://stackoverflow.com/questions/tagged/swift)  
 [Swift Coding Contests on Topcoder](http://swift.topcoder.com/fun-challenges/?action=callback&utm_source=palewar&utm_campaign=ReferralProgram)  
+
+Finally please also [Follow Me](https://twitter.com/swiftwala) and also [Subscribe](https://feedburner.google.com/fb/a/mailverify?uri=SwiftWala&loc=en_US) to this blog. I promise I will make myself useful :-)
