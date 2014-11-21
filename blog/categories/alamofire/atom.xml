@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Alamofire | Swift Wala]]></title>
+  <link href="http://swiftwala.com/blog/categories/alamofire/atom.xml" rel="self"/>
+  <link href="http://swiftwala.com/"/>
+  <updated>2014-11-22T00:14:55+05:30</updated>
+  <id>http://swiftwala.com/</id>
+  <author>
+    <name><![CDATA[Sachin Palewar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[CocoaPods Is Ready for Swift]]></title>
+    <link href="http://swiftwala.com/cocoapods-is-ready-for-swift"/>
+    <updated>2014-11-21T18:38:10+05:30</updated>
+    <id>http://swiftwala.com/cocoapods-is-ready-for-swift</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/CocoaPods.png" width="100" height="100"> When we work on a real project, we use many third-party libraries to make our lives easier. To use these libs, we first need to find them, download them and include them in our project. <a href="http://cocoapods.org/">CocoaPods</a> lets us automate all this process and also handles dependency management for us. Check out this <a href="http://nshipster.com/cocoapods/">post on NSHipster</a> for a very good intro. <!-- more --></p>
+
+<p>Using Cocoapods is really easy. You need to first install it by running <code>$ sudo gem install cocoapods</code> in Terminal. Then you need to create a Podfile in your project directory. A Podfile for including very popular <a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a> lib will look like this:</p>
+
+<pre><code class="ruby">source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '7.0'
+pod 'AFNetworking', '~&gt; 2.4'
+</code></pre>
+
+<p>And you are all set to use CocoaPods. You run <code>$ pod install</code> and you get an Xcode workspace file <code>.xcworkspace</code> created alongside your project file. From now on you need to always open and build project using workspace file instead of project file and you will be fine.</p>
+
+<p>When Swift became available, iOS programmers wanted to use their much beloved CocoaPods to integrated with already existing ObjectiveC libraries and that was not really difficult, above steps work with Swift projects as well, you just need <a href="https://medium.com/@kirualex/cocoapods-with-swift-e6f8ba8f0afc">a couple more steps</a> and you are done.</p>
+
+<p>However soon some new and shiny libraries written in Swift came on the scene. My favorites being <a href="http://nshipster.com/alamofire/">Alamofire</a> and <a href="https://github.com/SwiftyJSON/SwiftyJSON">SwiftyJSON</a>, but CocoaPods was not yet ready for Swift libs and people had to rely on using <a href="http://git-scm.com/book/en/Git-Tools-Submodules">alternative methods</a> to use these libs. However <a href="https://github.com/CocoaPods/CocoaPods/milestones/0.36.0">CocoaPods 0.36</a> is just around the corner and it will include support for Swift Pods.</p>
+
+<p>While a public release is still some time away, you can use CocoaPods unreleased code to start integrating Swift libs in your projects right now. Just be cautious, that this is not fully tested code and treat it as a stopgap measure till 0.36 comes out. Ok so let&rsquo;s see what needs to be done:</p>
+
+<ul>
+<li>Create a file, called &lsquo;Gemfile&rsquo; in your project directory and just paste these lines in the file and save:</li>
+</ul>
+
+
+<pre><code class="ruby">source 'https://rubygems.org'
+
+gem 'cocoapods', :git =&gt; 'https://github.com/CocoaPods/CocoaPods.git', :branch =&gt; 'swift'
+gem 'cocoapods-core', :git =&gt; 'https://github.com/CocoaPods/Core.git', :branch =&gt; 'swift'
+gem 'xcodeproj',  :git =&gt; "https://github.com/CocoaPods/Xcodeproj.git", :branch =&gt; 'ext_build_settings'
+</code></pre>
+
+<ul>
+<li>Run command <code>bundle install</code></li>
+<li>Create a Podfile. If you want to use Alamofire and SwiftyJSON in your project, your Podfile<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> should look like this:</li>
+</ul>
+
+
+<pre><code class="ruby">source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '8.0'
+pod 'SwiftyJSON', :git =&gt; "https://github.com/orta/SwiftyJSON", :branch =&gt; "podspec"
+pod 'Alamofire', :git =&gt; "https://github.com/mrackwitz/Alamofire.git", :branch =&gt; "podspec"
+</code></pre>
+
+<ul>
+<li>Run <code>bundle exec pod install</code><sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> and you are done. You get the workspace file which you need to use from now on.</li>
+</ul>
+
+
+<p>Now you should be able to import Alamofire and SwiftyJSON in your project and use them.</p>
+
+<p>Hope you liked this post. Connect via <a href="https://twitter.com/swiftwala">Twitter</a> &amp; <a href="https://feedburner.google.com/fb/a/mailverify?uri=SwiftWala&amp;amp;loc=en_US">email</a> for future updates. Thanks for reading.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Each lib should have a <a href="http://guides.cocoapods.org/making/specs-and-specs-repo.html">podspec</a> file to work with CocoaPods, since that&rsquo;s not the case right now, we are using forks of libs which contain a podspec file. This also means that if you want to use any other Swift lib with CocoaPods, you will need to fork it and create a podspec file for it yourself and then you will need to use path of your fork in the podfile.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>&lsquo;bundle exec&rsquo; ensures that you are using Swift CocoaPods version from your Gemfile. Thanks <a href="https://twitter.com/modocache">Brian</a> of <a href="https://github.com/Quick/Quick#how-to-install-quick-using-beta-cocoapods">Quick</a> for the tip.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>
