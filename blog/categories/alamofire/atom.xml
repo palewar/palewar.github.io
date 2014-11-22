@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Alamofire | Swift Wala]]></title>
   <link href="http://swiftwala.com/blog/categories/alamofire/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-11-22T10:35:55+05:30</updated>
+  <updated>2014-11-22T18:40:58+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -43,8 +43,8 @@ pod 'AFNetworking', '~&gt; 2.4'
 <pre><code class="ruby">source 'https://rubygems.org'
 
 gem 'cocoapods', :git =&gt; 'https://github.com/CocoaPods/CocoaPods.git', :branch =&gt; 'swift'
-gem 'cocoapods-core', :git =&gt; 'https://github.com/CocoaPods/Core.git', :branch =&gt; 'swift'
-gem 'xcodeproj',  :git =&gt; "https://github.com/CocoaPods/Xcodeproj.git", :branch =&gt; 'master'
+gem 'cocoapods-core', :git =&gt; 'https://github.com/CocoaPods/Core.git'
+gem 'xcodeproj',  :git =&gt; "https://github.com/CocoaPods/Xcodeproj.git"
 </code></pre>
 
 <ul>

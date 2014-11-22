@@ -4,7 +4,7 @@
   <title><![CDATA[Swift Wala]]></title>
   <link href="http://swiftwala.com/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-11-22T10:35:55+05:30</updated>
+  <updated>2014-11-22T18:40:58+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -53,8 +53,8 @@ And you are all set to use CocoaPods. You run <code>$ pod install</code> and you
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">source</span> <span class="s1">&#39;https://rubygems.org&#39;</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">gem</span> <span class="s1">&#39;cocoapods&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/CocoaPods/CocoaPods.git&#39;</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">&#39;swift&#39;</span>
-</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;cocoapods-core&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/CocoaPods/Core.git&#39;</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">&#39;swift&#39;</span>
-</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;xcodeproj&#39;</span><span class="p">,</span>  <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;https://github.com/CocoaPods/Xcodeproj.git&quot;</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">&#39;master&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;cocoapods-core&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/CocoaPods/Core.git&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;xcodeproj&#39;</span><span class="p">,</span>  <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;https://github.com/CocoaPods/Xcodeproj.git&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
