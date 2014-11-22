@@ -29,8 +29,8 @@ While a public release is still some time away, you can use CocoaPods unreleased
 source 'https://rubygems.org'
 
 gem 'cocoapods', :git => 'https://github.com/CocoaPods/CocoaPods.git', :branch => 'swift'
-gem 'cocoapods-core', :git => 'https://github.com/CocoaPods/Core.git', :branch => 'swift'
-gem 'xcodeproj',  :git => "https://github.com/CocoaPods/Xcodeproj.git", :branch => 'master'
+gem 'cocoapods-core', :git => 'https://github.com/CocoaPods/Core.git'
+gem 'xcodeproj',  :git => 'https://github.com/CocoaPods/Xcodeproj.git'
 ```  
 
 * Run command `bundle install` 
