@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Code | Swift Wala]]></title>
   <link href="http://swiftwala.com/blog/categories/code/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-11-22T18:40:58+05:30</updated>
+  <updated>2014-11-22T19:24:03+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -44,7 +44,7 @@ pod 'AFNetworking', '~&gt; 2.4'
 
 gem 'cocoapods', :git =&gt; 'https://github.com/CocoaPods/CocoaPods.git', :branch =&gt; 'swift'
 gem 'cocoapods-core', :git =&gt; 'https://github.com/CocoaPods/Core.git'
-gem 'xcodeproj',  :git =&gt; "https://github.com/CocoaPods/Xcodeproj.git"
+gem 'xcodeproj',  :git =&gt; 'https://github.com/CocoaPods/Xcodeproj.git'
 </code></pre>
 
 <ul>
