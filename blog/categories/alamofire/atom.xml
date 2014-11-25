@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Alamofire | Swift Wala]]></title>
   <link href="http://swiftwala.com/blog/categories/alamofire/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-11-22T19:24:03+05:30</updated>
+  <updated>2014-11-25T08:18:30+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -68,6 +68,14 @@ pod 'Alamofire', :git =&gt; "https://github.com/mrackwitz/Alamofire.git", :branc
 <p>Now you should be able to import Alamofire and SwiftyJSON in your project and use them.</p>
 
 <p>Hope you liked this post. Connect via <a href="https://twitter.com/swiftwala">Twitter</a> &amp; <a href="https://feedburner.google.com/fb/a/mailverify?uri=SwiftWala&amp;amp;loc=en_US">email</a> for future updates. Thanks for reading.</p>
+
+<p><strong> Update 25th Nov. 2014: </strong>
+If you are running into issues with setting up CocoaPods, you should add following line to the Gemfile:</p>
+
+<pre><code class="ruby">gem 'claide', :git =&gt; 'https://github.com/CocoaPods/CLAide.git'  
+</code></pre>
+
+<p>And then do <code>bundle install</code>. Thanks Ambas for the tip :-)</p>
 <div class="footnotes">
 <hr/>
 <ol>
