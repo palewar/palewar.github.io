@@ -4,7 +4,7 @@
   <title><![CDATA[Swift Wala]]></title>
   <link href="http://swiftwala.com/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-11-25T08:18:30+05:30</updated>
+  <updated>2014-11-25T13:57:19+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -50,11 +50,13 @@ And you are all set to use CocoaPods. You run <code>$ pod install</code> and you
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
+<span class='line-number'>6</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">source</span> <span class="s1">&#39;https://rubygems.org&#39;</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">gem</span> <span class="s1">&#39;cocoapods&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/CocoaPods/CocoaPods.git&#39;</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">&#39;swift&#39;</span>
 </span><span class='line'><span class="n">gem</span> <span class="s1">&#39;cocoapods-core&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/CocoaPods/Core.git&#39;</span>
 </span><span class='line'><span class="n">gem</span> <span class="s1">&#39;xcodeproj&#39;</span><span class="p">,</span>  <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/CocoaPods/Xcodeproj.git&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;claide&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/CocoaPods/CLAide.git&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -89,17 +91,6 @@ And you are all set to use CocoaPods. You run <code>$ pod install</code> and you
 <p>Now you should be able to import Alamofire and SwiftyJSON in your project and use them.</p>
 
 <p>Hope you liked this post. Connect via <a href="https://twitter.com/swiftwala">Twitter</a> &amp; <a href="https://feedburner.google.com/fb/a/mailverify?uri=SwiftWala&amp;amp;loc=en_US">email</a> for future updates. Thanks for reading.</p>
-
-<p><strong> Update 25th Nov. 2014: </strong>
-If you are running into issues with setting up CocoaPods, you should add following line to the Gemfile:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;claide&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/CocoaPods/CLAide.git&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>
-And then do <code>bundle install</code>. Thanks Ambas for the tip :-)</p>
 <div class="footnotes">
 <hr/>
 <ol>
