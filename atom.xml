@@ -4,7 +4,7 @@
   <title><![CDATA[Swift Wala]]></title>
   <link href="http://swiftwala.com/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-11-25T13:57:19+05:30</updated>
+  <updated>2014-11-25T14:44:21+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -88,7 +88,7 @@ And you are all set to use CocoaPods. You run <code>$ pod install</code> and you
 </ul>
 
 
-<p>Now you should be able to import Alamofire and SwiftyJSON in your project and use them.</p>
+<p>Now you should be able to import Alamofire and SwiftyJSON in your project and use<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> them.</p>
 
 <p>Hope you liked this post. Connect via <a href="https://twitter.com/swiftwala">Twitter</a> &amp; <a href="https://feedburner.google.com/fb/a/mailverify?uri=SwiftWala&amp;amp;loc=en_US">email</a> for future updates. Thanks for reading.</p>
 <div class="footnotes">
@@ -98,6 +98,8 @@ And you are all set to use CocoaPods. You run <code>$ pod install</code> and you
 <p>Each lib should have a <a href="http://guides.cocoapods.org/making/specs-and-specs-repo.html">podspec</a> file to work with CocoaPods, since that&rsquo;s not the case right now, we are using forks of libs which contain a podspec file. This also means that if you want to use any other Swift lib with CocoaPods, you will need to fork it and create a podspec file for it yourself and then you will need to use path of your fork in the podfile.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
 <p>&lsquo;bundle exec&rsquo; ensures that you are using Swift CocoaPods version from your Gemfile. Thanks <a href="https://twitter.com/modocache">Brian</a> of <a href="https://github.com/Quick/Quick#how-to-install-quick-using-beta-cocoapods">Quick</a> for the tip.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Thanks <a href="https://www.facebook.com/ambaschobsanti">Ambas</a> for the tip about CLAide.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
