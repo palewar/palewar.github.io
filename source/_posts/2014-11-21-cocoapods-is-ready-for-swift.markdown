@@ -31,6 +31,7 @@ source 'https://rubygems.org'
 gem 'cocoapods', :git => 'https://github.com/CocoaPods/CocoaPods.git', :branch => 'swift'
 gem 'cocoapods-core', :git => 'https://github.com/CocoaPods/Core.git'
 gem 'xcodeproj',  :git => 'https://github.com/CocoaPods/Xcodeproj.git'
+gem 'claide', :git => 'https://github.com/CocoaPods/CLAide.git'
 ```  
 
 * Run command `bundle install` 
@@ -46,9 +47,10 @@ pod 'Alamofire', :git => "https://github.com/mrackwitz/Alamofire.git", :branch =
 
 * Run `bundle exec pod install`[^2] and you are done. You get the workspace file which you need to use from now on.
 
-Now you should be able to import Alamofire and SwiftyJSON in your project and use them.
+Now you should be able to import Alamofire and SwiftyJSON in your project and use[^3] them.
 
 Hope you liked this post. Connect via [Twitter](https://twitter.com/swiftwala) & [email](https://feedburner.google.com/fb/a/mailverify?uri=SwiftWala&amp;loc=en_US) for future updates. Thanks for reading.
 
 [^1]: Each lib should have a [podspec](http://guides.cocoapods.org/making/specs-and-specs-repo.html) file to work with CocoaPods, since that's not the case right now, we are using forks of libs which contain a podspec file. This also means that if you want to use any other Swift lib with CocoaPods, you will need to fork it and create a podspec file for it yourself and then you will need to use path of your fork in the podfile.
 [^2]: 'bundle exec' ensures that you are using Swift CocoaPods version from your Gemfile. Thanks [Brian](https://twitter.com/modocache) of [Quick](https://github.com/Quick/Quick#how-to-install-quick-using-beta-cocoapods) for the tip.
+[^3]: Thanks [Ambas](https://www.facebook.com/ambaschobsanti) for the tip about CLAide.
