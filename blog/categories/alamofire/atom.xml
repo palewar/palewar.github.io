@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Alamofire | Swift Wala]]></title>
   <link href="http://swiftwala.com/blog/categories/alamofire/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2014-11-25T14:44:21+05:30</updated>
+  <updated>2014-11-27T20:11:52+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -20,7 +20,9 @@
     <id>http://swiftwala.com/cocoapods-is-ready-for-swift</id>
     <content type="html"><![CDATA[<p><img class="left" src="/images/CocoaPods.png" width="100" height="100"> When we work on a real project, we use many third-party libraries to make our lives easier. To use these libs, we first need to find them, download them and include them in our project. <a href="http://cocoapods.org/">CocoaPods</a> lets us automate all this process and also handles dependency management for us. Check out this <a href="http://nshipster.com/cocoapods/">post on NSHipster</a> for a very good intro. <!-- more --></p>
 
-<p>Using Cocoapods is really easy. You need to first install it by running <code>$ sudo gem install cocoapods</code> in Terminal. Then you need to create a Podfile in your project directory. A Podfile for including very popular <a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a> lib will look like this:</p>
+<blockquote><p>CocoaPods is like <a href="http://rubygems.org/">RubyGems</a> from the Ruby world and <a href="https://www.npmjs.org/">NPM</a> from the Node.js world.</p></blockquote>
+
+<p>Using Cocoapods is really easy. You need to first install it by running <code>$ sudo gem install cocoapods</code> in Terminal. Then you need to create a <code>Podfile</code> in your project directory. A <code>Podfile</code> for including very popular <a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a> lib will look like this:</p>
 
 <pre><code class="ruby">source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '7.0'
@@ -36,7 +38,7 @@ pod 'AFNetworking', '~&gt; 2.4'
 <p>While a public release is still some time away, you can use CocoaPods unreleased code to start integrating Swift libs in your projects right now. Just be cautious, that this is not fully tested code and treat it as a stopgap measure till 0.36 comes out. Ok so let&rsquo;s see what needs to be done:</p>
 
 <ul>
-<li>Create a file, called &lsquo;Gemfile&rsquo; in your project directory and just paste these lines in the file and save:</li>
+<li>Create a file, called <code>Gemfile</code> in your project directory and just paste these lines in the file and save:</li>
 </ul>
 
 
@@ -50,7 +52,7 @@ gem 'claide', :git =&gt; 'https://github.com/CocoaPods/CLAide.git'
 
 <ul>
 <li>Run command <code>bundle install</code></li>
-<li>Create a Podfile. If you want to use Alamofire and SwiftyJSON in your project, your Podfile<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> should look like this:</li>
+<li>Create a <code>Podfile</code>. If you want to use Alamofire and SwiftyJSON in your project, your <code>Podfile</code><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> should look like this:</li>
 </ul>
 
 
