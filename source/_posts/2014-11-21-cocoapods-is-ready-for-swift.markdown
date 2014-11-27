@@ -8,7 +8,9 @@ categories: [code, cocoapods, alamofire, swiftyjson]
 
 {% img left /images/CocoaPods.png 100 100 %} When we work on a real project, we use many third-party libraries to make our lives easier. To use these libs, we first need to find them, download them and include them in our project. [CocoaPods](http://cocoapods.org/) lets us automate all this process and also handles dependency management for us. Check out this [post on NSHipster](http://nshipster.com/cocoapods/) for a very good intro. <!-- more -->
 
-Using Cocoapods is really easy. You need to first install it by running `$ sudo gem install cocoapods` in Terminal. Then you need to create a Podfile in your project directory. A Podfile for including very popular [AFNetworking](https://github.com/AFNetworking/AFNetworking) lib will look like this:
+> CocoaPods is like [RubyGems](http://rubygems.org/) from the Ruby world and [NPM](https://www.npmjs.org/) from the Node.js world.
+
+Using Cocoapods is really easy. You need to first install it by running `$ sudo gem install cocoapods` in Terminal. Then you need to create a `Podfile` in your project directory. A `Podfile` for including very popular [AFNetworking](https://github.com/AFNetworking/AFNetworking) lib will look like this:
 
 ``` ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -23,7 +25,7 @@ However soon some new and shiny libraries written in Swift came on the scene. My
 
 While a public release is still some time away, you can use CocoaPods unreleased code to start integrating Swift libs in your projects right now. Just be cautious, that this is not fully tested code and treat it as a stopgap measure till 0.36 comes out. Ok so let's see what needs to be done:
 
-* Create a file, called 'Gemfile' in your project directory and just paste these lines in the file and save:
+* Create a file, called `Gemfile` in your project directory and just paste these lines in the file and save:
 
 ``` ruby
 source 'https://rubygems.org'
@@ -35,7 +37,7 @@ gem 'claide', :git => 'https://github.com/CocoaPods/CLAide.git'
 ```  
 
 * Run command `bundle install` 
-* Create a Podfile. If you want to use Alamofire and SwiftyJSON in your project, your Podfile[^1] should look like this:
+* Create a `Podfile`. If you want to use Alamofire and SwiftyJSON in your project, your `Podfile`[^1] should look like this:
 
 ``` ruby
 source 'https://github.com/CocoaPods/Specs.git'
