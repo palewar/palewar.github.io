@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://swiftwala.com/calculator</loc>
+    
+    <lastmod>2015-02-16T16:27:51+05:30</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://swiftwala.com/firefox</loc>
     
     <lastmod>2014-12-21T16:29:05+05:30</lastmod>
@@ -77,28 +85,28 @@
   
   <url>
     <loc>http://swiftwala.com/blog/archives/</loc>
-    <lastmod>2015-01-02T19:45:18+05:30</lastmod>
+    <lastmod>2015-02-16T19:18:14+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://swiftwala.com/</loc>
-    <lastmod>2015-01-02T19:45:18+05:30</lastmod>
+    <lastmod>2015-02-16T19:18:14+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://swiftwala.com/about-me/</loc>
-    <lastmod>2015-01-02T19:45:18+05:30</lastmod>
+    <lastmod>2015-02-16T19:18:14+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://swiftwala.com/links/</loc>
-    <lastmod>2015-01-02T19:45:18+05:30</lastmod>
+    <lastmod>2015-02-16T19:18:14+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
