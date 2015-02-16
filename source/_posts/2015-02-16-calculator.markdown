@@ -5,7 +5,7 @@ date: 2015-02-16 16:27:51 +0530
 comments: true
 categories: [code, autolayout, adaptive, stanford, cs193p]
 ---
-{% img /images/stanford-ios8.png %} All new [CS193P](https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099) started at Stanford sometime back. Great news is, that it's being taught in Swift. I have just finished listening first 2 lectures. I am quite impressed with **Paul Hegarty**. He starts the lecture with firing Xcode, talking about it and then beginning to code a Calculator app in Swift. He explains concepts as and when needed while using them. Quite hands-on and practical approach I must say. 
+{% img /images/stanford-ios8.png %} All new [CS193P](https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099) started at Stanford sometime back. Great news is, that it's being taught in Swift. I have just finished listening first 2 lectures. I am quite impressed with **Paul Hegarty**. He starts the lecture with firing Xcode, talking about it and then beginning to code a Calculator app in Swift. <!-- more --> He explains concepts as and when needed while using them. Quite hands-on and practical approach I must say. 
 
 If you have some experience with programming and are well conversant with [OOPS](http://en.wikipedia.org/wiki/Object-oriented_programming) concepts, then the course should be really easy to follow for you. It's a free course and available via iTunes, so I think anybody who is beginning with iOS development or Swift should really go through it.
 
