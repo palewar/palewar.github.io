@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Adaptive | Swift Wala]]></title>
   <link href="http://swiftwala.com/blog/categories/adaptive/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2015-02-16T19:18:14+05:30</updated>
+  <updated>2015-02-16T19:23:22+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -18,7 +18,7 @@
     <link href="http://swiftwala.com/calculator"/>
     <updated>2015-02-16T16:27:51+05:30</updated>
     <id>http://swiftwala.com/calculator</id>
-    <content type="html"><![CDATA[<p><img src="/images/stanford-ios8.png"> All new <a href="https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099">CS193P</a> started at Stanford sometime back. Great news is, that it&rsquo;s being taught in Swift. I have just finished listening first 2 lectures. I am quite impressed with <strong>Paul Hegarty</strong>. He starts the lecture with firing Xcode, talking about it and then beginning to code a Calculator app in Swift. He explains concepts as and when needed while using them. Quite hands-on and practical approach I must say.</p>
+    <content type="html"><![CDATA[<p><img src="/images/stanford-ios8.png"> All new <a href="https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099">CS193P</a> started at Stanford sometime back. Great news is, that it&rsquo;s being taught in Swift. I have just finished listening first 2 lectures. I am quite impressed with <strong>Paul Hegarty</strong>. He starts the lecture with firing Xcode, talking about it and then beginning to code a Calculator app in Swift. <!-- more --> He explains concepts as and when needed while using them. Quite hands-on and practical approach I must say.</p>
 
 <p>If you have some experience with programming and are well conversant with <a href="http://en.wikipedia.org/wiki/Object-oriented_programming">OOPS</a> concepts, then the course should be really easy to follow for you. It&rsquo;s a free course and available via iTunes, so I think anybody who is beginning with iOS development or Swift should really go through it.</p>
 
