@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Code | Swift Wala]]></title>
   <link href="http://swiftwala.com/blog/categories/code/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2015-02-16T19:23:22+05:30</updated>
+  <updated>2015-02-25T20:47:05+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Custom View Drawing]]></title>
+    <link href="http://swiftwala.com/drawing"/>
+    <updated>2015-02-25T10:18:29+05:30</updated>
+    <id>http://swiftwala.com/drawing</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/smily.png" width="150" height="150"> Stanford&rsquo;s <a href="https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099">CS193P</a> iOS8 development Course in Swift is turning out to be a well rounded and very useful resource so far. If you haven&rsquo;t started yet, I urge you to <a href="/calculator">start</a> now. In Lecture 5, Paul Hegarty starts with Objective-C Compatibility, he then talks about Property Lists etc. and then moves to completely different topic of <code>UIView</code> for remaining lecture. He does that often, keeps mixing different topics in a single lecture. I actually find that approach interesting and refreshing.</p>
+
+<!-- more -->
+
+
+<p>
+Paul starts explaining <code>UIView</code> and covers basics like View Hierarchy and initialization. Then he stresses that we must use <strong><code>CGFloat</code></strong> and not <code>Float</code> or <code>Double</code> when custom drawing our views. Other data structures we use with views are <code>CGPoint</code>, <code>CGSize</code> and <code>CGRect</code>. <strong>Upper-Left is considered as origin</strong> in view coordinate system, and not lower-left like in Cartesian system. Increasing Y means down the screen. <code>bounds</code> and <code>frame</code> are a bit confusing. We should always use <code>bounds</code> when drawing in a view, as <code>center</code> and <code>frame</code> actually belong to <code>superview</code> and can&rsquo;t be used directly. Please watch and re-watch this portion in the video to really wrap your head around these very important concepts.</p>
+
+<p>We need to override <code>drawRect</code> inside our view to do custom drawing however we should <strong>never call <code>drawRect</code> directly in our code</strong> and should instead call <code>setNeedsDisplay</code>, which will lead to <code>drawRect</code> being called by system. To create a smily face we need 1 big circle for the face, 2 smaller circles for eyes and one curve for the mouth. Code to draw the big circle is like this:</p>
+
+<pre><code class="swift">//@IBDesignable is not required, but it's used to render FaceView in Storyboard
+//without compiling.
+@IBDesignable class FaceView: UIView {
+
+    //@IBInspectable is used to make these properties available in Attributes Inspector
+    //while using Storyboard.
+    @IBInspectable var scale: CGFloat = 0.90 { didSet { setNeedsDisplay() } }
+    @IBInspectable var lineWidth: CGFloat = 3 { didSet { setNeedsDisplay() } }
+    @IBInspectable var color: UIColor = UIColor.blueColor() { didSet { setNeedsDisplay() } }
+
+    var faceCenter: CGPoint {
+        return convertPoint(center, fromView: superview)
+    }
+
+    var faceRadius: CGFloat {
+        return min(bounds.size.width, bounds.size.height) / 2 * scale
+    }
+
+    override func drawRect(rect: CGRect) {
+
+        //Drawing Face
+        let facePath = UIBezierPath(arcCenter: faceCenter, radius: faceRadius, startAngle: 0, endAngle: CGFloat(2 * M_PI), clockwise: true)
+        facePath.lineWidth = lineWidth
+        color.set()
+        facePath.stroke()
+
+    }
+}
+</code></pre>
+
+<p>Full code for the smily face is available at <a href="https://github.com/palewar/Swift-Samples">Github</a>. I have basically copied the code from the lecture so it&rsquo;s not my code, but I guess Paul won&rsquo;t mind me sharing it with all of you. Do watch the Lecture 5 video from the course, if you don&rsquo;t understand anything.</p>
+
+<p>Now let me share some of my thoughts about the course and Paul. Paul has been teaching iOS development for years now, but he talks about Swift, which is not even a year old with equal ease and confidence. In Lecture 6 he mentions about <code>@IBDesignable</code> and <code>@IBInspectable</code> very casually and briefly and you almost don&rsquo;t realise he is talking about 2 <a href="http://nshipster.com/ibinspectable-ibdesignable/">great new features</a> which were introduced recently with XCode 6.</p>
+
+<p>At times lectures do appear too crammed up and difficult to follow. Thankfully I am watching these lectures over iTunes so I can command Paul to repeat himself whenever I wish. I also sometime take a break between the lecture and do some further reading to help with understanding of the concepts, at times I just pause the lecture and sleep over it and resume when I wake up. I don&rsquo;t fret over not understanding everything almost immediately and keep moving ahead with the belief that eventually everything will make sense :-)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Calculator in Swift]]></title>

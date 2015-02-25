@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Custom View Drawing - Swift Wala</title>
+  <meta name="author" content="Sachin Palewar">
+
+  
+  <meta name="description" content="Stanford&rsquo;s CS193P iOS8 development Course in Swift is turning out to be a well rounded and very useful resource so far. If you haven&rsquo;t &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://swiftwala.com/drawing">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Swift Wala" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55591301-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Swift Wala</a></h1>
+  
+    <h2>A Blog about Swift and iOS Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+    <li><a href="http://feeds.feedburner.com/SwiftWala" rel="subscribe-email" title="subscribe via email">Email</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:swiftwala.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about-me">About Me</a></li> 
+  <li><a href="/links">Links</a></li> 
+  <li><a href="https://feedburner.google.com/fb/a/mailverify?uri=SwiftWala&amp;loc=en_US" target="_blank">Subscribe</a></li>
+
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Custom View Drawing</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-02-25T10:18:29+05:30'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>10:18 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://swiftwala.com">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img class="left" src="/images/smily.png" width="150" height="150"> Stanford&rsquo;s <a href="https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099">CS193P</a> iOS8 development Course in Swift is turning out to be a well rounded and very useful resource so far. If you haven&rsquo;t started yet, I urge you to <a href="/calculator">start</a> now. In Lecture 5, Paul Hegarty starts with Objective-C Compatibility, he then talks about Property Lists etc. and then moves to completely different topic of <code>UIView</code> for remaining lecture. He does that often, keeps mixing different topics in a single lecture. I actually find that approach interesting and refreshing.</p>
+
+<!-- more -->
+
+
+<p>
+Paul starts explaining <code>UIView</code> and covers basics like View Hierarchy and initialization. Then he stresses that we must use <strong><code>CGFloat</code></strong> and not <code>Float</code> or <code>Double</code> when custom drawing our views. Other data structures we use with views are <code>CGPoint</code>, <code>CGSize</code> and <code>CGRect</code>. <strong>Upper-Left is considered as origin</strong> in view coordinate system, and not lower-left like in Cartesian system. Increasing Y means down the screen. <code>bounds</code> and <code>frame</code> are a bit confusing. We should always use <code>bounds</code> when drawing in a view, as <code>center</code> and <code>frame</code> actually belong to <code>superview</code> and can&rsquo;t be used directly. Please watch and re-watch this portion in the video to really wrap your head around these very important concepts.</p>
+
+<p>We need to override <code>drawRect</code> inside our view to do custom drawing however we should <strong>never call <code>drawRect</code> directly in our code</strong> and should instead call <code>setNeedsDisplay</code>, which will lead to <code>drawRect</code> being called by system. To create a smily face we need 1 big circle for the face, 2 smaller circles for eyes and one curve for the mouth. Code to draw the big circle is like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='swift'><span class='line'><span class="c1">//@IBDesignable is not required, but it&#39;s used to render FaceView in Storyboard</span>
+</span><span class='line'><span class="c1">//without compiling.</span>
+</span><span class='line'><span class="p">@</span><span class="n">IBDesignable</span> <span class="k">class</span> <span class="nl">FaceView</span><span class="p">:</span> <span class="bp">UIView</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">//@IBInspectable is used to make these properties available in Attributes Inspector</span>
+</span><span class='line'>    <span class="c1">//while using Storyboard.</span>
+</span><span class='line'>    <span class="p">@</span><span class="n">IBInspectable</span> <span class="k">var</span> <span class="nl">scale</span><span class="p">:</span> <span class="n">CGFloat</span> <span class="o">=</span> <span class="mf">0.90</span> <span class="p">{</span> <span class="kr">didSet</span> <span class="p">{</span> <span class="n">setNeedsDisplay</span><span class="p">()</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>    <span class="p">@</span><span class="n">IBInspectable</span> <span class="k">var</span> <span class="nl">lineWidth</span><span class="p">:</span> <span class="n">CGFloat</span> <span class="o">=</span> <span class="mi">3</span> <span class="p">{</span> <span class="kr">didSet</span> <span class="p">{</span> <span class="n">setNeedsDisplay</span><span class="p">()</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>    <span class="p">@</span><span class="n">IBInspectable</span> <span class="k">var</span> <span class="nl">color</span><span class="p">:</span> <span class="bp">UIColor</span> <span class="o">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">blueColor</span><span class="p">()</span> <span class="p">{</span> <span class="kr">didSet</span> <span class="p">{</span> <span class="n">setNeedsDisplay</span><span class="p">()</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">var</span> <span class="nl">faceCenter</span><span class="p">:</span> <span class="bp">CGPoint</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">convertPoint</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="nl">fromView</span><span class="p">:</span> <span class="n">superview</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">var</span> <span class="nl">faceRadius</span><span class="p">:</span> <span class="n">CGFloat</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">min</span><span class="p">(</span><span class="n">bounds</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">bounds</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">scale</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kr">override</span> <span class="k">func</span> <span class="n">drawRect</span><span class="p">(</span><span class="nl">rect</span><span class="p">:</span> <span class="bp">CGRect</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">//Drawing Face</span>
+</span><span class='line'>        <span class="k">let</span> <span class="n">facePath</span> <span class="o">=</span> <span class="bp">UIBezierPath</span><span class="p">(</span><span class="nl">arcCenter</span><span class="p">:</span> <span class="n">faceCenter</span><span class="p">,</span> <span class="nl">radius</span><span class="p">:</span> <span class="n">faceRadius</span><span class="p">,</span> <span class="nl">startAngle</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nl">endAngle</span><span class="p">:</span> <span class="n">CGFloat</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">M_PI</span><span class="p">),</span> <span class="nl">clockwise</span><span class="p">:</span> <span class="nb">true</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">facePath</span><span class="p">.</span><span class="n">lineWidth</span> <span class="o">=</span> <span class="n">lineWidth</span>
+</span><span class='line'>        <span class="n">color</span><span class="p">.</span><span class="kr">set</span><span class="p">()</span>
+</span><span class='line'>        <span class="n">facePath</span><span class="p">.</span><span class="n">stroke</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+Full code for the smily face is available at <a href="https://github.com/palewar/Swift-Samples">Github</a>. I have basically copied the code from the lecture so it&rsquo;s not my code, but I guess Paul won&rsquo;t mind me sharing it with all of you. Do watch the Lecture 5 video from the course, if you don&rsquo;t understand anything.</p>
+
+<p>Now let me share some of my thoughts about the course and Paul. Paul has been teaching iOS development for years now, but he talks about Swift, which is not even a year old with equal ease and confidence. In Lecture 6 he mentions about <code>@IBDesignable</code> and <code>@IBInspectable</code> very casually and briefly and you almost don&rsquo;t realise he is talking about 2 <a href="http://nshipster.com/ibinspectable-ibdesignable/">great new features</a> which were introduced recently with XCode 6.</p>
+
+<p>At times lectures do appear too crammed up and difficult to follow. Thankfully I am watching these lectures over iTunes so I can command Paul to repeat himself whenever I wish. I also sometime take a break between the lecture and do some further reading to help with understanding of the concepts, at times I just pause the lecture and sleep over it and resume when I wake up. I don&rsquo;t fret over not understanding everything almost immediately and keep moving ahead with the belief that eventually everything will make sense :-)</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Sachin Palewar</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-02-25T10:18:29+05:30'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>10:18 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/code/'>code</a>, <a class='category' href='/blog/categories/cs193p/'>cs193p</a>, <a class='category' href='/blog/categories/stanford/'>stanford</a>, <a class='category' href='/blog/categories/uiview/'>uiview</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://swiftwala.com/drawing" data-via="swiftwala" data-counturl="http://swiftwala.com/drawing" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/calculator" title="Previous Post: Calculator in Swift">&laquo; Calculator in Swift</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/drawing">Custom View Drawing</a>
+      </li>
+    
+      <li class="post">
+        <a href="/calculator">Calculator in Swift</a>
+      </li>
+    
+      <li class="post">
+        <a href="/firefox">Let&#8217;s Bring Firefox to iOS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/cocoapods-is-ready-for-swift">CocoaPods Is Ready for Swift</a>
+      </li>
+    
+      <li class="post">
+        <a href="/functions-equals-closures">Functions = Closures</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/palewar">@palewar</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'palewar',
+            count: 4,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Sachin Palewar -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> and <a href="https://github.com/vladigleba/readify">Readify</a>. Hosted at <a href="https://pages.github.com/">Github</a>.</span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'swiftwala';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://swiftwala.com/drawing';
+        var disqus_url = 'http://swiftwala.com/drawing';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
