@@ -1,0 +1,51 @@
+---
+layout: post
+title: "Custom View Drawing"
+date: 2015-02-25 10:18:29 +0530
+comments: true
+categories: [code, cs193p, stanford, UIView]
+---
+
+{% img left /images/smily.png 150 150 %} Stanford's [CS193P](https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099) iOS8 development Course in Swift is turning out to be a well rounded and very useful resource so far. If you haven't started yet, I urge you to [start](/calculator) now. In Lecture 5, Paul Hegarty starts with Objective-C Compatibility, he then talks about Property Lists etc. and then moves to completely different topic of `UIView` for remaining lecture. He does that often, keeps mixing different topics in a single lecture. I actually find that approach interesting and refreshing.
+
+<!-- more --> 
+Paul starts explaining `UIView` and covers basics like View Hierarchy and initialization. Then he stresses that we must use **`CGFloat`** and not `Float` or `Double` when custom drawing our views. Other data structures we use with views are `CGPoint`, `CGSize` and `CGRect`. **Upper-Left is considered as origin** in view coordinate system, and not lower-left like in Cartesian system. Increasing Y means down the screen. `bounds` and `frame` are a bit confusing. We should always use `bounds` when drawing in a view, as `center` and `frame` actually belong to `superview` and can't be used directly. Please watch and re-watch this portion in the video to really wrap your head around these very important concepts.
+
+We need to override `drawRect` inside our view to do custom drawing however we should **never call `drawRect` directly in our code** and should instead call `setNeedsDisplay`, which will lead to `drawRect` being called by system. To create a smily face we need 1 big circle for the face, 2 smaller circles for eyes and one curve for the mouth. Code to draw the big circle is like this:
+
+``` swift
+//@IBDesignable is not required, but it's used to render FaceView in Storyboard
+//without compiling.
+@IBDesignable class FaceView: UIView {
+
+    //@IBInspectable is used to make these properties available in Attributes Inspector
+    //while using Storyboard.
+    @IBInspectable var scale: CGFloat = 0.90 { didSet { setNeedsDisplay() } }
+    @IBInspectable var lineWidth: CGFloat = 3 { didSet { setNeedsDisplay() } }
+    @IBInspectable var color: UIColor = UIColor.blueColor() { didSet { setNeedsDisplay() } }
+
+    var faceCenter: CGPoint {
+        return convertPoint(center, fromView: superview)
+    }
+
+    var faceRadius: CGFloat {
+        return min(bounds.size.width, bounds.size.height) / 2 * scale
+    }
+
+    override func drawRect(rect: CGRect) {
+
+        //Drawing Face
+        let facePath = UIBezierPath(arcCenter: faceCenter, radius: faceRadius, startAngle: 0, endAngle: CGFloat(2 * M_PI), clockwise: true)
+        facePath.lineWidth = lineWidth
+        color.set()
+        facePath.stroke()
+
+    }
+}
+
+``` 
+Full code for the smily face is available at [Github](https://github.com/palewar/Swift-Samples). I have basically copied the code from the lecture so it's not my code, but I guess Paul won't mind me sharing it with all of you. Do watch the Lecture 5 video from the course, if you don't understand anything.
+
+Now let me share some of my thoughts about the course and Paul. Paul has been teaching iOS development for years now, but he talks about Swift, which is not even a year old with equal ease and confidence. In Lecture 6 he mentions about `@IBDesignable` and `@IBInspectable` very casually and briefly and you almost don't realise he is talking about 2 [great new features](http://nshipster.com/ibinspectable-ibdesignable/) which were introduced recently with XCode 6. 
+
+At times lectures do appear too crammed up and difficult to follow. Thankfully I am watching these lectures over iTunes so I can command Paul to repeat himself whenever I wish. I also sometime take a break between the lecture and do some further reading to help with understanding of the concepts, at times I just pause the lecture and sleep over it and resume when I wake up. I don't fret over not understanding everything almost immediately and keep moving ahead with the belief that eventually everything will make sense :-)
