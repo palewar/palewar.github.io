@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Swiftyjson | Swift Wala]]></title>
   <link href="http://swiftwala.com/blog/categories/swiftyjson/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2015-02-25T20:47:05+05:30</updated>
+  <updated>2015-03-16T12:03:31+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -30,6 +30,12 @@ pod 'AFNetworking', '~&gt; 2.4'
 </code></pre>
 
 <p>And you are all set to use CocoaPods. You run <code>pod install</code> and you get an Xcode workspace file <code>.xcworkspace</code> created alongside your project file. From now on you need to always open and build project using workspace file instead of project file and you will be fine.</p>
+
+<hr />
+
+<p><strong>Update 11th March 2015:</strong> This blog post is outdated now as <a href="http://blog.cocoapods.org/CocoaPods-0.36/">CocoaPods 0.36</a> has been released and you just need to do <code>sudo gem install cocoapods</code> to install it. You can read complete details about what all is different in 0.36 on CocoaPods official <a href="http://blog.cocoapods.org/CocoaPods-0.36/">blog</a>.</p>
+
+<hr />
 
 <p>When Swift became available, iOS programmers wanted to use their much beloved CocoaPods to integrated with already existing ObjectiveC libraries and that was not really difficult, above steps work with Swift projects as well, you just need <a href="https://medium.com/@kirualex/cocoapods-with-swift-e6f8ba8f0afc">a couple more steps</a> and you are done.</p>
 
