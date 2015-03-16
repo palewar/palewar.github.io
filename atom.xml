@@ -4,7 +4,7 @@
   <title><![CDATA[Swift Wala]]></title>
   <link href="http://swiftwala.com/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2015-03-16T12:03:31+05:30</updated>
+  <updated>2015-03-16T12:15:03+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -302,7 +302,7 @@ And you are all set to use CocoaPods. You run <code>pod install</code> and you g
 
 <hr />
 
-<p><strong>Update 11th March 2015:</strong> This blog post is outdated now as <a href="http://blog.cocoapods.org/CocoaPods-0.36/">CocoaPods 0.36</a> has been released and you just need to do <code>sudo gem install cocoapods</code> to install it. You can read complete details about what all is different in 0.36 on CocoaPods official <a href="http://blog.cocoapods.org/CocoaPods-0.36/">blog</a>.</p>
+<p><strong>Update 11th March 2015:</strong> This blog post is outdated now as <a href="http://blog.cocoapods.org/CocoaPods-0.36/">CocoaPods 0.36</a>, which supports Swift, has been released and you just need to do <code>sudo gem install cocoapods</code> to install it. You can read complete details about what all is different in 0.36 on CocoaPods official <a href="http://blog.cocoapods.org/CocoaPods-0.36/">blog</a>.</p>
 
 <hr />
 
