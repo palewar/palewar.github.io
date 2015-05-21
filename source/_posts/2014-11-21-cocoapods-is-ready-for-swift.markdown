@@ -19,6 +19,11 @@ pod 'AFNetworking', '~> 2.4'
 ``` 
 And you are all set to use CocoaPods. You run `pod install` and you get an Xcode workspace file `.xcworkspace` created alongside your project file. From now on you need to always open and build project using workspace file instead of project file and you will be fine.
 
+---
+**Update 11th March 2015:** This blog post is outdated now as [CocoaPods 0.36](http://blog.cocoapods.org/CocoaPods-0.36/), which supports Swift, has been released and you just need to do `sudo gem install cocoapods` to install it. You can read complete details about what all is different in 0.36 on CocoaPods official [blog](http://blog.cocoapods.org/CocoaPods-0.36/). Also don't forget to put `use_frameworks!` before the `pod` statements to support dynamic frameworks in your project.
+
+---
+
 When Swift became available, iOS programmers wanted to use their much beloved CocoaPods to integrated with already existing ObjectiveC libraries and that was not really difficult, above steps work with Swift projects as well, you just need [a couple more steps](https://medium.com/@kirualex/cocoapods-with-swift-e6f8ba8f0afc) and you are done.
 
 However soon some new and shiny libraries written in Swift came on the scene. My favorites being [Alamofire](http://nshipster.com/alamofire/) and [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON), but CocoaPods was not yet ready for Swift libs and people had to rely on using [alternative methods](http://git-scm.com/book/en/Git-Tools-Submodules) to use these libs. However [CocoaPods 0.36](https://github.com/CocoaPods/CocoaPods/milestones/0.36.0) is just around the corner and it will include support for Swift Pods.
