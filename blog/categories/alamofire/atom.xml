@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Alamofire | Swift Wala]]></title>
   <link href="http://swiftwala.com/blog/categories/alamofire/atom.xml" rel="self"/>
   <link href="http://swiftwala.com/"/>
-  <updated>2015-03-16T12:15:03+05:30</updated>
+  <updated>2015-05-21T14:42:30+05:30</updated>
   <id>http://swiftwala.com/</id>
   <author>
     <name><![CDATA[Sachin Palewar]]></name>
@@ -33,7 +33,7 @@ pod 'AFNetworking', '~&gt; 2.4'
 
 <hr />
 
-<p><strong>Update 11th March 2015:</strong> This blog post is outdated now as <a href="http://blog.cocoapods.org/CocoaPods-0.36/">CocoaPods 0.36</a>, which supports Swift, has been released and you just need to do <code>sudo gem install cocoapods</code> to install it. You can read complete details about what all is different in 0.36 on CocoaPods official <a href="http://blog.cocoapods.org/CocoaPods-0.36/">blog</a>.</p>
+<p><strong>Update 11th March 2015:</strong> This blog post is outdated now as <a href="http://blog.cocoapods.org/CocoaPods-0.36/">CocoaPods 0.36</a>, which supports Swift, has been released and you just need to do <code>sudo gem install cocoapods</code> to install it. You can read complete details about what all is different in 0.36 on CocoaPods official <a href="http://blog.cocoapods.org/CocoaPods-0.36/">blog</a>. Also don&rsquo;t forget to put <code>use_frameworks!</code> before the <code>pod</code> statements to support dynamic frameworks in your project.</p>
 
 <hr />
 
