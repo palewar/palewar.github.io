@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://swiftwala.com/sitemap.xml 
